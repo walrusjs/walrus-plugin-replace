@@ -1,0 +1,26 @@
+{
+  "name": "@walrus/walrus-plugin-replace-keywords",
+  "version": "0.0.1",
+  "description": "replace code keywords",
+  "main": "lib/index.js",
+  "keywords": [
+    "walrus-plugin",
+    "replace-keywords"
+  ],
+  "repository": "git@github.com:walrus-plus/walrus-plugin-replace-keywords.git",
+  "author": "wangxingkang <wang_xingkang@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "walrus replace",
+    "build": "father-build --watch"
+  },
+  "devDependencies": {
+    "@walrus/cli": "^0.0.6",
+    "@walrus/types": "^0.0.6",
+    "father-build": "^1.12.0",
+    "typescript": "^3.6.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
