@@ -3,7 +3,11 @@ import { join } from 'path';
 
 const config: IConfig = {
   plugins: [
-    [join(__dirname, './lib/index.js')]
+    [join(__dirname, './lib/index.js'), {
+      files: 'example/**/*',
+      from: /foo/g,
+      to: 'bar',
+    }]
   ]
 };
 

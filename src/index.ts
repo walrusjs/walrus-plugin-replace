@@ -1,4 +1,5 @@
 import { IApi, IConfig } from '@walrus/types';
+import replace from './replace';
 
 export default function(
   api: IApi,
@@ -7,7 +8,7 @@ export default function(
   api.registerCommand('replace', {
     description: 'replace files keywords',
     usage: 'walrus replace [options] [...files]',
-  }, (args, rawArgv) => {
-    console.log(args);
+  }, (args, rawArgv, config) => {
+    replace(config).then(() => {});
   })
 }
