@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "module": "esnext",
+    /* Basic Options */
     "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "outDir": "lib",
+    "declaration": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+
+    /* Module Resolution Options */
     "moduleResolution": "node",
-    "jsx": "react"
+    "esModuleInterop": true
   },
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
