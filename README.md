@@ -4,22 +4,22 @@
   </a>
 </p>
 
-<h1 align="center">walrus-plugin-replace-keywords</h1>
+<h1 align="center">@walrus/plugin-replace</h1>
 
 <div align="center">
-替换文件中的关键字
+替换文件内容
 </div>
 
-[![NPM version](https://img.shields.io/npm/v/@walrus/walrus-plugin-replace-keywords.svg?style=flat)](https://npmjs.org/package/@walrus/walrus-plugin-replace-keywords)
+[![NPM version](https://img.shields.io/npm/v/@walrus/plugin-replace.svg?style=flat)](https://npmjs.org/package/@walrus/plugin-replace)
 
 ## 📦 安装
 
 ```
 // npm
-npm install @walrus/cli @walrus/walrus-plugin-replace-keywords
+npm install @walrus/cli @walrus/plugin-replace
 
 // yarn
-yarn add --dev @walrus/cli @walrus/walrus-plugin-replace-keywords
+yarn add --dev @walrus/cli @walrus/plugin-replace
 
 ```
 
@@ -30,16 +30,16 @@ yarn add --dev @walrus/cli @walrus/walrus-plugin-replace-keywords
 ```
 // walrus.config.ts
 
-import { IConfig } from '@walrus/types';
+import { Config } from '@walrus/types';
 
-const config: IConfig = {
-  plugins: [
-    ['@walrus/walrus-plugin-replace-keywords, {
+const config: Config = {
+  plugins: {
+    replace: {
       files: 'example/**/*',
       from: /foo/g,
-      to: 'bar',
-    }]
-  ]
+      to: 'bar'
+    }
+  }
 };
 ```
 

@@ -1,11 +1,11 @@
 {
-  "name": "@walrus/walrus-plugin-replace-keywords",
-  "version": "0.0.1",
-  "description": "replace code keywords",
+  "name": "@walrus/plugin-replace",
+  "version": "1.0.0",
+  "description": "replace files code",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
-    "walrus-plugin",
+    "walrus-plugin-replace",
     "replace"
   ],
   "files": [
@@ -15,15 +15,17 @@
   "author": "wangxingkang <wang_xingkang@qq.com>",
   "license": "MIT",
   "scripts": {
-    "build": "pansy",
-    "test": "walrus replace"
+    "build": "rm -rf dist && pansy",
+    "build:watch": "pansy -w",
+    "replace": "walrus replace",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "replace-in-file": "^4.1.3"
   },
   "devDependencies": {
     "@pansy/cli": "^0.1.5",
-    "@walrus/cli": "^0.2.2",
+    "@walrus/cli": "^0.3.0",
     "typescript": "^3.6.4"
   },
   "publishConfig": {
