@@ -1,6 +1,6 @@
 {
   "name": "@walrus/plugin-replace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "replace files code",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
